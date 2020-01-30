@@ -1,26 +1,29 @@
 {
   "name": "reading_notes",
   "version": "1.0.0",
-  "description": "",
+  "description": "An organized collection of reading notes",
   "main": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mtking2/reading-notes.git"
+  },
   "scripts": {
     "compile": "node compile.js",
     "build": "npm run compile",
-    "watch": "nodemon -e js,sass,pug,md -x \"npm run build\"",
+    "watch": "nodemon -e js,sass,pug,md -x \"npm run build && http-server -c-1\"",
+    "start": "npm run watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Michael King",
   "license": "MIT",
-  "dependencies": {
-    "browserify": "^16.5.0",
+  "devDependencies": {
     "front-matter": "^3.1.0",
+    "http-server": "^0.12.1",
     "jstransformer-coffee-script": "^1.1.1",
     "jstransformer-markdown-it": "^2.1.0",
     "node-sass": "^4.13.1",
+    "nodemon": "^2.0.2",
     "pug": "^2.0.4"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.2"
   }
 }

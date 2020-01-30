@@ -25,6 +25,8 @@ function compileBooks(callback) {
 
     let pugString = `
     \rextends ../layout
+    \rappend variables
+    \r  - var isBook = true
     \rblock content
     \r  div(id=filename).notes
     \r    h1: u= meta.title

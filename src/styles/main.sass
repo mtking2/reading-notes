@@ -1,4 +1,5 @@
-@import "variables.sass"
+@import "variables"
+@import "layout"
 
 html, body
   background: $dark-color
@@ -66,6 +67,22 @@ a
   &:visited
     color: slateblue
 
+footer.dev-info
+  position: absolute
+  bottom: 0
+  width: 100%
+  height: 8rem
+  padding-top: 5rem
+  padding-bottom: 5rem
+  text-align: center
+  background: #000
+  border-top: 0.25rem solid #222
+  img
+    margin: 1rem
+    height: 4rem
+  .last-modified
+    color: #333
+    font-family: monospace
 
 @media screen and (max-width: 2560px)
   body

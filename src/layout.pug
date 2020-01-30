@@ -20,5 +20,16 @@ html(lang="en")
       gtag('js', new Date());
       gtag('config', 'UA-80843466-2');
     
-  body 
-    block content
+  body
+    div.container
+      block content
+      
+      footer.dev-info
+        div.row.flex-content-center
+          a(href='https://nodejs.org/') #[img(src='/assets/nodejs-light.png' alt='nodejs')]
+          a(href='https://pugjs.org') #[img(src='/assets/pug.svg' alt='pug')]
+          a(href='http://sass-lang.com/') #[img(src='/assets/sass.svg' alt='sass')]
+          a(href='https://validator.w3.org/nu/check/referer') #[img(src='/assets/valid-html5.png' alt='w3-validator' style="height: 2rem; margin-bottom: 2rem")]
+        div.last-modified
+          script
+            | document.write("Last modified: " + document.lastModified + "");

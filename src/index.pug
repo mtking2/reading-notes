@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  div.home
+    h1 Reading notes
+    hr
+    h2 2020
+    ul
+      each book in books
+        li: a(href='books/'+book.filename+'.html')= book.meta.title

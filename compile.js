@@ -33,7 +33,8 @@ function compileBooks(callback) {
     \r    h3: em By #{meta.author}
     \r    hr
     \r    if meta.image_url
-    \r      img(src=meta.image_url alt=meta.title || 'image')
+    \r      center
+    \r        img(src=meta.image_url alt=meta.title || 'image')
     \r    div.chapsums
     \r      :markdown-it(linkify html=true)
     \r        ${(book.body).replace(/\n/g,'\n        ')}

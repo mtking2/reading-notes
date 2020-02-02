@@ -11,6 +11,10 @@ html(lang="en")
     title Reading Notes  
     link(href="https://fonts.googleapis.com/css?family=Rubik", rel="stylesheet")
     link(href="https://www.starwarsfont.com/download/aurek_besh" rel="canonical")
+    //- link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css")
+    
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism-tomorrow.min.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/plugins/line-numbers/prism-line-numbers.min.css")
     if isBook
       link(rel="stylesheet" href="../main.css")
     else
@@ -24,7 +28,7 @@ html(lang="en")
       gtag('js', new Date());
       gtag('config', 'UA-80843466-2');
     
-  body
+  body.line-numbers
     div.container
       
       block content
@@ -36,5 +40,11 @@ html(lang="en")
           a(href='http://sass-lang.com/') #[img(src='https://mtking2.github.io/assets/sass.svg' alt='sass')]
           a(href='https://validator.w3.org/nu/check/referer') #[img(src='https://mtking2.github.io/assets/valid-html5.png' alt='w3-validator' style="height: 2rem; margin-bottom: 2rem")]
         div.last-modified
-          script
-            | document.write("Last modified: " + document.lastModified + "");
+          script.
+            document.write("Last modified: " + document.lastModified + "");
+            
+    script(src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-core.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/plugins/line-numbers/prism-line-numbers.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/plugins/autoloader/prism-autoloader.min.js")

@@ -29,14 +29,16 @@ function compileBooks(callback) {
     \r  - var isBook = true
     \rblock content
     \r  div(id=filename).notes
-    \r    h1: u= meta.title
-    \r    h3: em By #{meta.author}
+    \r    if meta.title
+    \r      h1: u= meta.title
+    \r    if meta.author
+    \r      h3: em By #{meta.author}
     \r    hr
     \r    if meta.image_url
     \r      center
     \r        img(src=meta.image_url alt=meta.title || 'image')
     \r    div.chapsums
-    \r      :markdown-it(linkify html=true)
+    \r      :markdown-it(linkify html=true langPrefix='lang-')
     \r        ${(book.body).replace(/\n/g,'\n        ')}
     `;
     // console.log(pugString)

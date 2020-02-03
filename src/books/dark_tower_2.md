@@ -1,7 +1,5 @@
 ---
-title: 'The Dark Tower II: The Drawing of the Three'
-author: Stephen King
-image_url:
+isbn: 9781501161810
 shelf: to-read
 ---
 

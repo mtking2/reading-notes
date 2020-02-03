@@ -1,26 +1,53 @@
+require('dotenv').config()
+
 const fs = require('fs');
 const path = require('path');
+const request = require('request');
+const parseString = require('xml2js').parseString
 
 const pug = require('pug');
 const sass = require('node-sass');
 const fm = require('front-matter');
 
+function getBookData(isbn) {
+  return new Promise(function(resolve, reject) {
+    if (!isbn) return resolve()
+    request.get(`https://www.goodreads.com/book/isbn/${isbn}?key=${process.env.GOODREADS_KEY}`, function (error, resp, body) {
+      if (error) return reject(error)
+      parseString('\n'+body, function(parseErr, result) {
+        if (parseErr) return reject(parseErr)
+        let grBook = result.GoodreadsResponse.book[0]
+        resolve(grBook);
+      });
+    });
+  });
+}
 
-
-function compileBooks(callback) {
+async function compileBooks() {
   var books = [];
   var files = fs.readdirSync('src/books');
-  files.forEach(file => {
+  for (let i in files) {
+    let file = files[i];
 
     var contents = fs.readFileSync(`src/books/${file}`, 'utf8');
     let data = fm(contents);
 
-    // console.log(data);
     let book = {
       meta: data.attributes,
       filename: file.replace('.md',''),
       body: data.body
     };
+
+    let grBook = await getBookData(book.meta.isbn);
+    if (grBook) {
+      book.meta.title = book.meta.title || grBook.title[0]
+      book.meta.author = book.meta.author || grBook.authors[0].author[0].name
+      let image_url = grBook.image_url[0].replace(/\._.*_\./, '.');
+      if (!image_url.includes('nophoto')) {
+        book.meta.image_url = book.meta.image_url || grBook.image_url[0].replace(/\._.*_\./, '.')
+      }
+    }
+
     books.push(book);
 
     let pugString = `
@@ -39,21 +66,19 @@ function compileBooks(callback) {
     \r      :markdown-it(linkify html=true)
     \r        ${(book.body).replace(/\n/g,'\n        ')}
     `;
-    // console.log(pugString)
 
     let html = pug.compile(pugString, { pretty: true, filename: `src/pages/${book.filename}.pug`})(book);
-    // console.log(html)
 
-    fs.writeFileSync(`books/${book.filename}.html`, html);
-    console.log(`CREATE FILE: books/${file.replace('.pug','.html')}`)
+    let filename = `books/${book.filename}.html`;
+    fs.writeFileSync(filename, html);
+    console.log(`CREATE FILE: books/${filename}`)
 
-  });
+  }
 
-  callback({ books: books });
+  return { books: books };
 }
 
-compileBooks(function(books) {
-  // console.log(books);
+compileBooks().then( (books) => {
 
   var html = pug.compileFile('src/index.pug', { pretty: true })(books);
 
@@ -76,5 +101,4 @@ compileBooks(function(books) {
       });
     }
   });
-
 });

@@ -2,6 +2,7 @@
 title: 'Star Wars The Old Republic: Revan'
 author: Drew Karpyshyn
 image_url: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1344368840l/13359972.jpg
+shelf: currently-reading
 ---
 
 ## Prologue

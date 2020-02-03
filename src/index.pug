@@ -4,7 +4,18 @@ block content
   div.home
     h1 Reading notes
     hr
+    
+    - var toRead = books.filter((book) => { return book.meta.shelf === 'to-read' })
+    - var currentlyReading = books.filter((book) => { return book.meta.shelf === 'currently-reading' })
+    
     h2 2020
+    
+    h3 Currently Reading
     ul
-      each book in books
+      each book in currentlyReading
         li: a(href='books/'+book.filename+'.html')= book.meta.title
+      
+    h3 To Read
+    ul
+      each book in toRead
+        li= book.meta.title

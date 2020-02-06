@@ -20,9 +20,10 @@ block content
       each book in currentlyReading
         li(class=(book.meta.updated ? 'new' : ''))
           a(href='books/'+book.filename+'.html')= book.meta.title
-            - var date = new Date(new Date().setHours(0,0,0,0))
-            if new Date(book.meta.updated) > date.setDate(date.getDate() - 30)
-              span.notification-badge
+          - var date = new Date(new Date().setHours(0,0,0,0))
+          if new Date(book.meta.updated) > date.setDate(date.getDate() - 30)
+            a(href='books/'+book.filename+'.html#latest')
+              span.notification-badge.notification-badge-right
       
     h3 To Read
     ul

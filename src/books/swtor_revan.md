@@ -1,6 +1,7 @@
 ---
-shelf: currently-reading
+title: 'Star Wars: The Old Republic: Revan'
 isbn: 9780345511355
+shelf: currently-reading
 updated: 02-05-2020
 ---
 
@@ -69,10 +70,13 @@ Revan awakens from a dream - _or rather a memory_ - about him and Malak atop one
 
 The next morning, with military like efficiency, the clan pack-up camp and made out for the _Twin Spears_. Marching two by two with a forward scouting group, and using the Basilisk War Droids to tow supply crates, it takes them the whole day to travel ⅔-rds  of the way there. They setup camp for the night in a nearby valley. The next morning they head-on to the _Twin Spears_, moving extra cautiously since they are now deep into Clan Jendri territory. Finally reaching the ice pillars they setup camp once more near the base of the _Spears_.
 
+<span class="latest">
+<a name="latest"></a>
+
 During the early hours of the next morning Clan Jendri began their attack on the Ordo camp. Feeling the disturbance through the force, Revan woke before the alarm sounded. Canderous was already out in the midst of battle. Revan bolted out of the tent with twin blasters in hand. Amongst the chaos he saw that 4 of Clan Jendri's Basilisk War Droids were in flight laying waste down onto the battlefield but all 6 of Clan Ordo's war droids were still grounded. He shoots his way over to the droids and finds that Canderous, Veela, and the rest of the Basilisk pilots were stuck taking cover behind some snowy rocks from the other 4 Jendri droids. In a split decision to forgo his concealed identity, Revan leaps from behind the rocks and ignites his green lightsaber. Dodging and weaving, he's able to flank one of the Basilisks and jump on it's back - taking out the pilot with a lightsaber through the chest. Revan's distraction allowed the others to mount their Basilisks and take to the air. Now outgunning the Jendri they are easily able to take the battlefieldand push them back, making them retreat.
 
-With the battle won, the _Twin Spears_ are now rightfully in Clan Ordo's territory. Veela acknowledges Revan/Avren as a Jedi (_although unsure if she yet knows his true identity_) and orders him to help with the wounded and to make preparations to scale the first of the two _Spears_ the next morning.
-
+With the battle won, the <i>Twin Spears</i> are now rightfully in Clan Ordo's territory. Veela acknowledges Revan/Avren as a Jedi (<i>although unsure if she yet knows his true identity</i>) and orders him to help with the wounded and to make preparations to scale the first of the two <i>Spears</i> the next morning.
+</span>
 
 ## Chapter 12
 

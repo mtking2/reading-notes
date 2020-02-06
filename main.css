@@ -3,19 +3,6 @@
   src: url("src/fonts/Aurebesh.otf") format("opentype"); }
 
 html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  text-rendering: optimizeLegibility; }
-
-.container {
-  min-height: 100vh;
-  display: block;
-  position: relative;
-  padding-bottom: 18rem; }
-
-html, body {
   background: #141414;
   color: #777;
   font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Helvetica', Arial, sans-serif; }
@@ -53,41 +40,50 @@ h6, .h6 {
   font-weight: 400;
   margin: -1rem 0 0.1rem 0; }
 
-.home {
+.home, .notes {
   margin: 0 10rem 5rem 10rem; }
-  .home .notification-badge {
+  .home .notification-badge, .notes .notification-badge {
     position: absolute;
     border-radius: 50%;
-    margin: 0.25rem 0.25rem 0.25rem 0.5rem;
     width: 0.65rem;
     height: 0.65rem;
     background-color: #4285f4;
     animation-name: notification-pulse;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-iteration-count: infinite; }
+    .home .notification-badge-right, .notes .notification-badge-right {
+      margin: 0.3rem 0.25rem 0.25rem 0.5rem; }
+    .home .notification-badge-left, .notes .notification-badge-left {
+      margin: 0.3rem 0.25rem 0.25rem -1rem; }
 
 @keyframes notification-pulse {
   0% {
     background-color: #4285f4; }
   50% {
-    background-color: #5a95f5;
-    box-shadow: 0 0 5px 2px #4285f4; }
+    background-color: #72a4f7;
+    box-shadow: 0 0 5px 2px #5a95f5; }
   100% {
     background-color: #4285f4; } }
-
-.notes {
-  margin: 0 10rem 5rem 10rem; }
-  .notes img {
+  .home .jump-to-latest, .notes .jump-to-latest {
+    width: 100%;
+    text-align: right; }
+    .home .jump-to-latest-link, .notes .jump-to-latest-link {
+      text-decoration: none; }
+      .home .jump-to-latest-link:visited, .notes .jump-to-latest-link:visited {
+        color: #7491c2; }
+  .home img, .notes img {
     float: left;
     margin: 4rem 2rem 2rem 0rem; }
-  .notes .chapsums {
+  .home .chapsums, .notes .chapsums {
     text-align: left;
     margin-top: 4rem; }
-    .notes .chapsums h2, .notes .chapsums h6 {
+    .home .chapsums h2, .home .chapsums h6, .notes .chapsums h2, .notes .chapsums h6 {
       color: #aaa; }
-    .notes .chapsums p {
+    .home .chapsums p, .notes .chapsums p {
       font-size: 13pt; }
-  .notes#swtor_revan h2, .notes#swtor_revan h6 {
+    .home .chapsums .latest, .notes .chapsums .latest {
+      color: #7491c2; }
+  .home#swtor_revan h2, .home#swtor_revan h6, .notes#swtor_revan h2, .notes#swtor_revan h6 {
     color: #4285f4;
     font-family: 'Aurek-Besh'; }
 
@@ -97,9 +93,11 @@ hr {
   border-radius: 10px; }
 
 a {
-  color: #4285f4; }
+  color: #72a4f7; }
   a:visited {
     color: slateblue; }
+    a:visited:hover {
+      color: #8d81d9; }
 
 footer.dev-info {
   position: absolute;
@@ -117,6 +115,19 @@ footer.dev-info {
   footer.dev-info .last-modified {
     color: #333;
     font-family: monospace; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-rendering: optimizeLegibility; }
+
+.container {
+  min-height: 100vh;
+  display: block;
+  position: relative;
+  padding-bottom: 18rem; }
 
 @media screen and (max-width: 2560px) {
   body {
@@ -139,13 +150,17 @@ footer.dev-info {
   body {
     font-size: 16px; }
   .home, .notes {
-    max-width: 85vw; } }
+    max-width: 85vw; }
+    .home h1, .home .h1, .notes h1, .notes .h1 {
+      font-size: 3em; } }
 
 @media screen and (max-width: 750px) {
   body {
     font-size: 16px; }
   .home, .notes {
-    max-width: 90vw; } }
+    max-width: 90vw; }
+    .home h1, .home .h1, .notes h1, .notes .h1 {
+      font-size: 2.5em; } }
 
 @media screen and (max-width: 640px) {
   body {

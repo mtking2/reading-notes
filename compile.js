@@ -58,6 +58,12 @@ async function compileBooks() {
     \r  div(id=filename).notes
     \r    h1: u= meta.title
     \r    h3: em By #{meta.author}
+    \r    - var date = new Date(new Date().setHours(0,0,0,0))
+    \r    if new Date(meta.updated) > date.setDate(date.getDate() - 30)
+    \r      div.jump-to-latest
+    \r        a.jump-to-latest-link(href='#latest').
+    \r          #[span.notification-badge.notification-badge-left]
+    \r          Jump to latest update
     \r    hr
     \r    if meta.image_url
     \r      center

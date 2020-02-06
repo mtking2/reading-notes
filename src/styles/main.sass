@@ -1,5 +1,5 @@
 @import "variables"
-@import "layout"
+
 
 html, body
   background: $dark-color
@@ -34,33 +34,40 @@ h6, .h6
   font-weight: $bold-font-weight
   margin: -1rem 0 0.1rem 0
 
-.home
+.home, .notes
+  // text-align: center
   margin: 0 10rem 5rem 10rem
-  li.new
-    // color: $blue-color
+
   .notification-badge
     position: absolute
     border-radius: 50%
-    margin: 0.25rem 0.25rem 0.25rem 0.5rem
     width: 0.65rem
     height: 0.65rem
     background-color: $blue-color
     animation-name: notification-pulse
-    animation-duration: 2s
+    animation-duration: 1.5s
     animation-iteration-count: infinite
+    &-right
+      margin: 0.3rem 0.25rem 0.25rem 0.5rem
+    &-left
+      margin: 0.3rem 0.25rem 0.25rem -1rem
 
   @keyframes notification-pulse
     0%
       background-color: $blue-color
     50%
-      background-color: lighten($blue-color, 5%)
-      box-shadow: 0 0 5px 2px $blue-color
+      background-color: lighten($blue-color, 10%)
+      box-shadow: 0 0 5px 2px lighten($blue-color, 5%)
     100%
       background-color: $blue-color
-.notes
-  // text-align: center
-  margin: 0 10rem 5rem 10rem
 
+  .jump-to-latest
+    width: 100%
+    text-align: right
+    &-link
+      text-decoration: none
+      &:visited
+        color: desaturate($link-color, 50%)
   img
     float: left
     margin: 4rem 2rem 2rem 0rem
@@ -72,6 +79,9 @@ h6, .h6
       color: $mid-gray
     p
       font-size: 13pt
+    .latest
+      color: desaturate($blue-color, 50%)
+
 
   &#swtor_revan
     h2, h6
@@ -85,9 +95,11 @@ hr
   border-radius: 10px
 
 a
-  color: $blue-color
+  color: lighten($link-color, 10%)
   &:visited
     color: slateblue
+    &:hover
+      color: lighten(slateblue, 10%)
 
 footer.dev-info
   position: absolute
@@ -106,41 +118,4 @@ footer.dev-info
     color: #333
     font-family: monospace
 
-@media screen and (max-width: 2560px)
-  body
-    font-size: $font-size + 2
-  .home, .notes
-    max-width: 60vw
-    margin: 0 auto 5rem auto
-
-@media screen and (max-width: 1600px)
-  .home, .notes
-    max-width: 75vw
-
-@media screen and (max-width: 1440px)
-  body
-    font-size: $font-size + 1
-  .home, .notes
-    max-width: 85vw
-
-@media screen and (max-width: 1024px)
-  body
-    font-size: $font-size
-  .home, .notes
-    max-width: 85vw
-
-@media screen and (max-width: 750px)
-  body
-    font-size: $font-size
-  .home, .notes
-    max-width: 90vw
-
-@media screen and (max-width: 640px)
-  body
-    font-size: $font-size - 1
-  .home, .notes
-    .chapsums
-      margin-top: 1rem
-  .notes img
-      float: none
-      margin: 1rem
+@import "layout"

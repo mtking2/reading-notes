@@ -36,6 +36,27 @@ h6, .h6
 
 .home
   margin: 0 10rem 5rem 10rem
+  li.new
+    // color: $blue-color
+  .notification-badge
+    position: absolute
+    border-radius: 50%
+    margin: 0.25rem 0.25rem 0.25rem 0.5rem
+    width: 0.65rem
+    height: 0.65rem
+    background-color: $blue-color
+    animation-name: notification-pulse
+    animation-duration: 2s
+    animation-iteration-count: infinite
+
+  @keyframes notification-pulse
+    0%
+      background-color: $blue-color
+    50%
+      background-color: lighten($blue-color, 5%)
+      box-shadow: 0 0 5px 2px $blue-color
+    100%
+      background-color: $blue-color
 .notes
   // text-align: center
   margin: 0 10rem 5rem 10rem
@@ -54,7 +75,8 @@ h6, .h6
 
   &#swtor_revan
     h2, h6
-      color: #549ed4
+      // color: #549ed4
+      color: $blue-color
       font-family: 'Aurek-Besh'
 
 hr

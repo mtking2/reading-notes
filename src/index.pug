@@ -5,15 +5,24 @@ block content
     h1 Reading notes
     hr
     
-    - var toRead = books.filter((book) => { return book.meta.shelf === 'to-read' })
-    - var currentlyReading = books.filter((book) => { return book.meta.shelf === 'currently-reading' })
+    - var toRead = books.filter((b) => { return b.meta.shelf === 'to-read' })
+    - 
+      var currentlyReading = books.filter((b) => { 
+        return b.meta.shelf === 'currently-reading' 
+      }).sort( (a,b) => { 
+        return Date.parse(b.meta.updated) - Date.parse(a.meta.updated) 
+      })
     
     h2 2020
     
     h3 Currently Reading
     ul
       each book in currentlyReading
-        li: a(href='books/'+book.filename+'.html')= book.meta.title
+        li(class=(book.meta.updated ? 'new' : ''))
+          a(href='books/'+book.filename+'.html')= book.meta.title
+            - var date = new Date(new Date().setHours(0,0,0,0))
+            if new Date(book.meta.updated) > date.setDate(date.getDate() - 30)
+              span.notification-badge
       
     h3 To Read
     ul

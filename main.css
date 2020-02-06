@@ -55,6 +55,25 @@ h6, .h6 {
 
 .home {
   margin: 0 10rem 5rem 10rem; }
+  .home .notification-badge {
+    position: absolute;
+    border-radius: 50%;
+    margin: 0.25rem 0.25rem 0.25rem 0.5rem;
+    width: 0.65rem;
+    height: 0.65rem;
+    background-color: #4285f4;
+    animation-name: notification-pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; }
+
+@keyframes notification-pulse {
+  0% {
+    background-color: #4285f4; }
+  50% {
+    background-color: #5a95f5;
+    box-shadow: 0 0 5px 2px #4285f4; }
+  100% {
+    background-color: #4285f4; } }
 
 .notes {
   margin: 0 10rem 5rem 10rem; }
@@ -69,7 +88,7 @@ h6, .h6 {
     .notes .chapsums p {
       font-size: 13pt; }
   .notes#swtor_revan h2, .notes#swtor_revan h6 {
-    color: #549ed4;
+    color: #4285f4;
     font-family: 'Aurek-Besh'; }
 
 hr {
@@ -78,7 +97,7 @@ hr {
   border-radius: 10px; }
 
 a {
-  color: #2980B9; }
+  color: #4285f4; }
   a:visited {
     color: slateblue; }
 

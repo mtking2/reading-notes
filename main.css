@@ -83,7 +83,7 @@ h6, .h6 {
       font-size: 13pt; }
     .home .chapsums .latest, .notes .chapsums .latest {
       color: #7491c2; }
-  .home#swtor_revan h2, .home#swtor_revan h6, .notes#swtor_revan h2, .notes#swtor_revan h6 {
+  .home[id='9780345511355'] h2, .home[id='9780345511355'] h6, .notes[id='9780345511355'] h2, .notes[id='9780345511355'] h6 {
     color: #4285f4;
     font-family: 'Aurek-Besh'; }
 

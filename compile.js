@@ -78,7 +78,10 @@ async function compileBooks() {
     let html = pug.compile(pugString, { pretty: true, filename: `src/pages/${book.filename}.pug`})(book);
 
     let filename = path.join( __dirname, `./dist/books/${book.filename}.html`);
-    fs.mkdirSync(path.join( __dirname, './dist/books'));
+    let bookDir = path.join( __dirname, './dist/books')
+    if (!fs.existsSync(bookDir)){
+      fs.mkdirSync(bookDir);
+    }
     fs.writeFileSync(filename, html);
     console.log(`CREATE FILE: ${filename}`)
 

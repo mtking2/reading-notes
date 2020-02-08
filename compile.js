@@ -14,7 +14,7 @@ function getBookData(isbn) {
     if (!isbn) return resolve()
     request.get(`https://www.goodreads.com/book/isbn/${isbn}?key=${process.env.GOODREADS_KEY}`, function (error, resp, body) {
       if (error) return reject(error)
-      parseString('\n'+body, function(parseErr, result) {
+      parseString(' '+body, function(parseErr, result) {
         if (parseErr) return reject(parseErr)
         let grBook = result.GoodreadsResponse.book[0]
         resolve(grBook);

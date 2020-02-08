@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Aurek-Besh";
-  src: url("src/fonts/Aurebesh.otf") format("opentype"); }
+  font-family: 'Aurek-Besh';
+  src: url("assets/fonts/Aurebesh.otf") format("opentype"); }
 
 html, body {
   background: #141414;

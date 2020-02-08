@@ -75,9 +75,9 @@ async function compileBooks() {
 
     let html = pug.compile(pugString, { pretty: true, filename: `src/pages/${book.filename}.pug`})(book);
 
-    let filename = `books/${book.filename}.html`;
+    let filename = `dist/books/${book.filename}.html`;
     fs.writeFileSync(filename, html);
-    console.log(`CREATE FILE: books/${filename}`)
+    console.log(`CREATE FILE: ${filename}`)
 
   }
 
@@ -88,21 +88,21 @@ compileBooks().then( (books) => {
 
   var html = pug.compileFile('src/index.pug', { pretty: true })(books);
 
-  fs.writeFile('index.html', html, function (err) {
+  fs.writeFile('dist/index.html', html, function (err) {
     if (err) return console.error(err)
-    console.log('CREATE FILE: index.html')
+    console.log('CREATE FILE: dist/index.html')
   });
 
   var sassSrc = 'src/styles/main.sass'
   sass.render({
     file: sassSrc,
-    outFile: "main.css",
+    outFile: 'main.css',
   }, function(error, result) { // node-style callback from v3.0.0 onwards
     if(!error){
       // No errors during the compilation, write this result on the disk
-      fs.writeFile("main.css", result.css, function(err){
+      fs.writeFile('dist/main.css', result.css, function(err){
         if(!err){
-          console.log('CREATE FILE: main.css')
+          console.log('CREATE FILE: dist/main.css')
         }
       });
     }

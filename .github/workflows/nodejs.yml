@@ -15,11 +15,12 @@ jobs:
       run: |
         npm install
         npm run-script build
-
+      env:
+        GOODREADS_KEY: ${{ secrets.GOODREADS_KEY }}
+        
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        GOODREADS_KEY: ${{ secrets.GOODREADS_KEY }}
         BRANCH: gh-pages
         FOLDER: dist

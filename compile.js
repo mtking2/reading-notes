@@ -38,7 +38,9 @@ async function compileBooks() {
       body: data.body
     };
 
-    let grBook = await getBookData(book.meta.isbn);
+    let grBook = await getBookData(book.meta.isbn).catch( (error) => {
+      console.error(error);
+    });
     if (grBook) {
       book.meta.title = book.meta.title || grBook.title[0]
       book.meta.author = book.meta.author || grBook.authors[0].author[0].name

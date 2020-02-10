@@ -5,39 +5,41 @@
 html, body {
   background: #141414;
   color: #777;
-  font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Helvetica', Arial, sans-serif; }
+  font-family: "Roboto", "Open Sans", "Helvetica", Arial, sans-serif;
+  font-weight: 400; }
 
 h1, .h1 {
   font-size: 3.5em;
-  font-family: "Rubik", sans-serif;
-  font-weight: 400;
+  font-family: "Rubik", "Roboto", "Open Sans", sans-serif;
+  font-weight: 500;
   margin: 1rem 0; }
 
 h2, .h2 {
   font-size: 2.5em;
-  font-family: "Rubik", sans-serif;
-  font-weight: 400;
+  font-family: "Rubik", "Roboto", "Open Sans", sans-serif;
+  font-weight: 500;
   margin: 1rem 0; }
 
 h3, .h3 {
   font-size: 1.5em;
-  font-weight: 400;
+  font-family: "Rubik", "Roboto", "Open Sans", sans-serif;
+  font-weight: 500;
   margin: 0.5rem 0; }
 
 h4, .h4 {
   font-size: 1.25em;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0.5rem 0; }
 
 h5, .h5 {
   font-size: 1.125em;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0.25rem 0; }
 
 h6, .h6 {
   font-size: 1.125em;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 500;
   margin: -1rem 0 0.1rem 0; }
 
 .home, .notes {
@@ -65,6 +67,7 @@ h6, .h6 {
   100% {
     background-color: #4285f4; } }
   .home .jump-to-latest, .notes .jump-to-latest {
+    font-family: "Rubik", "Roboto", "Open Sans", sans-serif;
     width: 100%;
     text-align: right; }
     .home .jump-to-latest-link, .notes .jump-to-latest-link {
@@ -75,12 +78,17 @@ h6, .h6 {
     float: left;
     margin: 4rem 2rem 2rem 0rem; }
   .home .chapsums, .notes .chapsums {
+    font-family: "Exo", "Roboto", "Open Sans", "Helvetica", Arial, sans-serif;
     text-align: left;
     margin-top: 4rem; }
     .home .chapsums h2, .home .chapsums h6, .notes .chapsums h2, .notes .chapsums h6 {
       color: #aaa; }
     .home .chapsums p, .notes .chapsums p {
       font-size: 13pt; }
+    .home .chapsums i, .notes .chapsums i {
+      font-weight: 300; }
+    .home .chapsums em, .notes .chapsums em {
+      font-weight: 700; }
     .home .chapsums .latest, .notes .chapsums .latest {
       color: #7491c2; }
   .home[id='9780345511355'] h2, .home[id='9780345511355'] h6, .notes[id='9780345511355'] h2, .notes[id='9780345511355'] h6 {

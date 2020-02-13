@@ -7,7 +7,18 @@ const parseString = require('xml2js').parseString
 
 const pug = require('pug');
 const sass = require('node-sass');
+
+const showdown  = require('showdown');
+showdown.setFlavor('github');
+const converter = new showdown.Converter();
+
 const fm = require('front-matter');
+
+var pugFilters = {
+  'showdown': function(text, options) {
+    return converter.makeHtml(text);
+  }
+};
 
 function getBookData(isbn) {
   return new Promise(function(resolve, reject) {
@@ -71,11 +82,11 @@ async function compileBooks() {
     \r      center
     \r        img(src=meta.image_url alt=meta.title || 'image')
     \r    div.chapsums
-    \r      :markdown-it(linkify html=true)
+    \r      :showdown
     \r        ${(book.body).replace(/\n/g,'\n        ')}
     `;
 
-    let html = pug.compile(pugString, { pretty: true, filename: `src/pages/${book.filename}.pug`})(book);
+    let html = pug.compile(pugString, { pretty: true, filters: pugFilters, filename: `src/pages/${book.filename}.pug`})(book);
 
     let filename = path.join( __dirname, `./dist/books/${book.filename}.html`);
     let bookDir = path.join( __dirname, './dist/books')

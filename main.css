@@ -152,7 +152,7 @@ html, body {
   .home, .notes {
     max-width: 60vw;
     margin: 0 auto 5rem auto; }
-  ul {
+  .chapsums ul {
     columns: 3; } }
 
 @media screen and (max-width: 1600px) {
@@ -172,7 +172,7 @@ html, body {
     max-width: 85vw; }
     .home h1, .home .h1, .notes h1, .notes .h1 {
       font-size: 3em; }
-  ul {
+  .chapsums ul {
     columns: 2; } }
 
 @media screen and (max-width: 750px) {

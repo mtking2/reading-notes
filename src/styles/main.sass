@@ -81,6 +81,7 @@ h6, .h6
     font-family: 'Exo', $font-family
     text-align: left
     margin-top: 4rem
+    word-spacing: 0.5px
     h2, h6
       color: $mid-gray
     p
@@ -91,7 +92,14 @@ h6, .h6
       font-weight: 700
     .latest
       color: desaturate($blue-color, 50%)
-
+    .fn
+      font-size: small
+      color: darken($dark-gray, 10%)
+      &-num
+        font-style: normal
+        text-decoration: none
+        font-family: 'Aurek-Besh'
+        margin-left: 2px
 
   &[id='9780345511355']
     h2, h6

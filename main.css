@@ -80,7 +80,8 @@ h6, .h6 {
   .home .chapsums, .notes .chapsums {
     font-family: "Exo", "Roboto", "Open Sans", "Helvetica", Arial, sans-serif;
     text-align: left;
-    margin-top: 4rem; }
+    margin-top: 4rem;
+    word-spacing: 0.5px; }
     .home .chapsums h2, .home .chapsums h6, .notes .chapsums h2, .notes .chapsums h6 {
       color: #aaa; }
     .home .chapsums p, .notes .chapsums p {
@@ -91,6 +92,14 @@ h6, .h6 {
       font-weight: 700; }
     .home .chapsums .latest, .notes .chapsums .latest {
       color: #7491c2; }
+    .home .chapsums .fn, .notes .chapsums .fn {
+      font-size: small;
+      color: #5e5e5e; }
+      .home .chapsums .fn-num, .notes .chapsums .fn-num {
+        font-style: normal;
+        text-decoration: none;
+        font-family: 'Aurek-Besh';
+        margin-left: 2px; }
   .home[id='9780345511355'] h2, .home[id='9780345511355'] h6, .notes[id='9780345511355'] h2, .notes[id='9780345511355'] h6 {
     color: #4285f4;
     font-family: 'Aurek-Besh'; }
@@ -142,7 +151,9 @@ html, body {
     font-size: 18px; }
   .home, .notes {
     max-width: 60vw;
-    margin: 0 auto 5rem auto; } }
+    margin: 0 auto 5rem auto; }
+  ul {
+    columns: 3; } }
 
 @media screen and (max-width: 1600px) {
   .home, .notes {
@@ -160,7 +171,9 @@ html, body {
   .home, .notes {
     max-width: 85vw; }
     .home h1, .home .h1, .notes h1, .notes .h1 {
-      font-size: 3em; } }
+      font-size: 3em; }
+  ul {
+    columns: 2; } }
 
 @media screen and (max-width: 750px) {
   body {

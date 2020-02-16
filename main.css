@@ -217,6 +217,8 @@ html, body {
     max-width: 85vw; }
     .home h1, .home .h1, .notes h1, .notes .h1 {
       font-size: 3em; }
+    .home img, .notes img {
+      max-width: 25vw; }
   .chapsums ul {
     columns: 2; } }
 
@@ -235,4 +237,5 @@ html, body {
     margin-top: 1rem; }
   .notes img {
     float: none;
-    margin: 1rem; } }
+    margin: 1rem;
+    max-width: 45vw; } }

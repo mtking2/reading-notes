@@ -8,10 +8,10 @@ html(lang="en")
     meta(name="theme-color" content="#111412")
     meta(name="apple-mobile-web-app-status-bar-style" content="#111412")
     
-      
     title Reading Notes  
     link(href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Exo:200,300,400,500,600|Rubik:300,400,700", rel="stylesheet")
     link(href="https://www.starwarsfont.com/download/aurek_besh" rel="canonical")
+    script(src="https://kit.fontawesome.com/7b8d51796d.js" crossorigin="anonymous")
     if isBook
       link(rel="stylesheet" href="../main.css")
       link(rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon")
@@ -32,6 +32,9 @@ html(lang="en")
       
       block content
       
+      div#back-to-top
+        span #[i.fas.fa-angle-double-up]
+      
       footer.dev-info
         div.row.flex-content-center
           a(href='https://nodejs.org/') #[img(src='https://mtking2.github.io/assets/nodejs-light.png' alt='nodejs')]
@@ -41,3 +44,11 @@ html(lang="en")
         div.last-modified
           script
             | document.write("Last modified: " + document.lastModified + "");
+          
+    script(
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    )
+    script
+      include book.js

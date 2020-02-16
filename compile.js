@@ -77,7 +77,11 @@ async function compileBooks() {
     \r        a.jump-to-latest-link(href='#latest').
     \r          #[span.notification-badge.notification-badge-left]
     \r          Jump to latest update
-    \r    hr
+    \r    br
+    \r    div.progress
+    \r      div.progress-bar
+    \r        span.progress-bar-percent
+    \r      p.progress-value
     \r    if meta.image_url
     \r      center
     \r        img(src=meta.image_url alt=meta.title || 'image')

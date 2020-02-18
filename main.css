@@ -5,7 +5,7 @@
 html, body {
   background: #141414;
   color: #777;
-  font-family: "Roboto", "Open Sans", "Helvetica", Arial, sans-serif;
+  font-family: "Ubuntu", "Exo", "Roboto", "Open Sans", "Helvetica", Arial, sans-serif;
   font-weight: 400; }
 
 h1, .h1 {
@@ -78,7 +78,7 @@ h6, .h6 {
     float: left;
     margin: 4rem 2rem 2rem 0rem; }
   .home .chapsums, .notes .chapsums {
-    font-family: "Exo", "Roboto", "Open Sans", "Helvetica", Arial, sans-serif;
+    font-family: "Ubuntu", "Exo", "Roboto", "Open Sans", "Helvetica", Arial, sans-serif;
     text-align: left;
     margin-top: 4rem;
     word-spacing: 0.5px; }
@@ -97,8 +97,9 @@ h6, .h6 {
       color: #5e5e5e; }
       .home .chapsums .fn-num, .notes .chapsums .fn-num {
         font-style: normal;
-        text-decoration: none;
+        font-size: 12pt;
         font-family: 'Aurek-Besh';
+        text-decoration: none;
         margin-left: 2px; }
     .home .chapsums .contents .task-list-item input, .notes .chapsums .contents .task-list-item input {
       pointer-events: none; }

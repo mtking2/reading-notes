@@ -83,7 +83,7 @@ $(function() {
     let finishedChapters = chapters.filter ( c => { return $(c).prop('checked') });
     let percentDone = Math.round( ( ( finishedChapters.length / chapters.length  ) * 100 ) * 10 ) / 10;
 
-    $('.progress-value').html( `${percentDone}% read` );
+    $('.progress-value').html( `${Math.round(percentDone)}% read` );
     $('.progress-bar-percent, .progress-value').width( `${percentDone}%` );
   }
 

@@ -40,7 +40,8 @@ $(function() {
 
   backToTop();
   $('#back-to-top').click(function() {
-    $(document).scrollTop(0);
+    // $(document).scrollTop(0);
+    $('html, body').animate({ scrollTop: 0 }, 'slow');
   });
 
   $(document).scroll(function () {

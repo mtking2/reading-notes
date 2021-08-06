@@ -1,7 +1,6 @@
 ---
 title: 'Star Wars: The Old Republic: Revan'
 isbn: 9780345511355
-shelf: currently-reading
 updated: 11-12-2020
 ---
 

@@ -5,24 +5,24 @@
 html, body {
   background: #141414;
   color: #777;
-  font-family: "Exo", "Roboto", "Open Sans", "Helvetica", Arial, sans-serif;
+  font-family: "Roboto", "Open Sans", "Helvetica", Arial, sans-serif;
   font-weight: 400; }
 
 h1, .h1 {
   font-size: 3.5em;
-  font-family: "Rubik", "Roboto", "Open Sans", sans-serif;
+  font-family: "Rubik", "Open Sans", sans-serif;
   font-weight: 500;
   margin: 1rem 0; }
 
 h2, .h2 {
   font-size: 2.5em;
-  font-family: "Rubik", "Roboto", "Open Sans", sans-serif;
+  font-family: "Rubik", "Open Sans", sans-serif;
   font-weight: 500;
   margin: 1rem 0; }
 
 h3, .h3 {
   font-size: 1.5em;
-  font-family: "Rubik", "Roboto", "Open Sans", sans-serif;
+  font-family: "Rubik", "Open Sans", sans-serif;
   font-weight: 500;
   margin: 0.5rem 0; }
 
@@ -67,7 +67,7 @@ h6, .h6 {
   100% {
     background-color: #4285f4; } }
   .home .jump-to-latest, .notes .jump-to-latest {
-    font-family: "Rubik", "Roboto", "Open Sans", sans-serif;
+    font-family: "Rubik", "Open Sans", sans-serif;
     width: 100%;
     text-align: right; }
     .home .jump-to-latest-link, .notes .jump-to-latest-link {
@@ -78,7 +78,7 @@ h6, .h6 {
     float: left;
     margin: 4rem 2rem 2rem 0rem; }
   .home .chapsums, .notes .chapsums {
-    font-family: "Exo", "Roboto", "Open Sans", "Helvetica", Arial, sans-serif;
+    font-family: "Roboto", "Open Sans", "Helvetica", Arial, sans-serif;
     text-align: left;
     margin-top: 4rem;
     word-spacing: 0.5px; }
@@ -96,15 +96,18 @@ h6, .h6 {
       font-size: small;
       color: #5e5e5e; }
       .home .chapsums .fn-num, .notes .chapsums .fn-num {
-        font-style: normal;
-        font-size: 12pt;
-        font-family: 'Aurek-Besh';
-        text-decoration: none;
         margin-left: 2px; }
     .home .chapsums .contents .task-list-item input, .notes .chapsums .contents .task-list-item input {
       pointer-events: none; }
+  .home[id='9780345511355'] p, .home[id='9780345511355'] a, .notes[id='9780345511355'] p, .notes[id='9780345511355'] a {
+    font-family: 'Exo'; }
   .home[id='9780345511355'] h2, .home[id='9780345511355'] h6, .notes[id='9780345511355'] h2, .notes[id='9780345511355'] h6 {
     color: #4285f4;
+    font-family: 'Aurek-Besh'; }
+  .home[id='9780345511355'] .fn-num, .notes[id='9780345511355'] .fn-num {
+    font-style: normal;
+    font-size: 12pt;
+    text-decoration: none;
     font-family: 'Aurek-Besh'; }
   .home .progress, .notes .progress {
     width: 100%; }

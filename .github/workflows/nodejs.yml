@@ -19,6 +19,7 @@ jobs:
         npm run-script build
       env:
         GOODREADS_KEY: ${{ secrets.GOODREADS_KEY }}
+        GOODREADS_USER_ID: ${{ secrets.GOODREADS_USER_ID }}
         
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3

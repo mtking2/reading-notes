@@ -13,9 +13,7 @@ block content
         return Date.parse(b.meta.updated) - Date.parse(a.meta.updated) 
       })
     
-    h2 2020
-    
-    h3 Currently Reading
+    h2 Currently Reading
     ul
       each book in currentlyReading
         li(class=(book.meta.updated ? 'new' : ''))
@@ -25,7 +23,11 @@ block content
             a(href='books/'+book.filename+'.html#latest')
               span.notification-badge.notification-badge-right
       
-    h3 To Read
+    h2 To Read
     ul
       each book in toRead
-        li= book.meta.title
+        if book.body
+          li
+            a(href='books/'+book.filename+'.html')= book.meta.title
+        else
+          li= book.meta.title
